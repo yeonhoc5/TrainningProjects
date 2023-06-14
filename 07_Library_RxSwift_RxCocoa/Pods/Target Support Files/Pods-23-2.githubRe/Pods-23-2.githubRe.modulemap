@@ -1,0 +1,6 @@
+framework module Pods_23_2_githubRe {
+  umbrella header "Pods-23-2.githubRe-umbrella.h"
+
+  export *
+  module * { export * }
+}
