@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoticeViewController" customModule="_8_remoteControll" customModuleProvider="target">
+            <connections>
+                <outlet property="lblNoticeDate" destination="1fe-Lk-fUr" id="RHI-eN-zIe"/>
+                <outlet property="lblNoticeDetail" destination="Hr2-0A-YUT" id="xXZ-C4-0wv"/>
+                <outlet property="lblNoticeTitle" destination="Mxj-SF-7LJ" id="iwa-TB-ACW"/>
+                <outlet property="noticeView" destination="0i9-8m-F2G" id="d2H-2H-FcM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i9-8m-F2G">
+                    <rect key="frame" x="50" y="194" width="314" height="468"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f3J-1H-Otq">
+                            <rect key="frame" x="15" y="25" width="284" height="418"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지사항" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0D-zq-yLQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="284" height="23"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="서버 증설 작업에 따른 서비스 이용 일시 중단 안내" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-SF-7LJ">
+                                    <rect key="frame" x="0.0" y="58" width="284" height="53"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="관리 체계 정비 및 서버 안전성을 위한 서버 증설 작업을 실시합니다. 작업 시간 동안에는 모든 서비스 이용이 전면 중단되오니 이용에 참고 부탁드립니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hr2-0A-YUT">
+                                    <rect key="frame" x="0.0" y="146" width="284" height="101.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="점검일시 2002년 8월 9일(금) 01:00~09:00 (8시간)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fe-Lk-fUr">
+                                    <rect key="frame" x="0.0" y="282" width="284" height="61"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-FW-pq3">
+                                    <rect key="frame" x="0.0" y="378" width="284" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="LWa-tL-w0X"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="gray" title="확인">
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="tabBtnDone:" destination="-1" eventType="touchUpInside" id="IuZ-ga-vVZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="f3J-1H-Otq" firstAttribute="leading" secondItem="0i9-8m-F2G" secondAttribute="leading" constant="15" id="GVm-kB-uAb"/>
+                        <constraint firstItem="f3J-1H-Otq" firstAttribute="top" secondItem="0i9-8m-F2G" secondAttribute="top" constant="25" id="XHS-LZ-Jxh"/>
+                        <constraint firstAttribute="trailing" secondItem="f3J-1H-Otq" secondAttribute="trailing" constant="15" id="ecw-MA-Mr6"/>
+                        <constraint firstAttribute="bottom" secondItem="f3J-1H-Otq" secondAttribute="bottom" constant="25" id="rS3-6N-n4n"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0i9-8m-F2G" secondAttribute="trailing" constant="50" id="2MH-ui-H1N"/>
+                <constraint firstItem="0i9-8m-F2G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="JDx-X1-bry"/>
+                <constraint firstItem="0i9-8m-F2G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="MBs-l3-W6d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0i9-8m-F2G" secondAttribute="bottom" constant="200" id="nvJ-7Q-7st"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
