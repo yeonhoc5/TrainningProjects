@@ -10,10 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tfCityName: UITextField!
-    
     @IBOutlet weak var lblCityName: UILabel!
     @IBOutlet weak var lblWeatherDescription: UILabel!
-    
     @IBOutlet weak var lblCurrentTemp: UILabel!
     @IBOutlet weak var lblMaxTemp: UILabel!
     @IBOutlet weak var lblMinTemp: UILabel!
@@ -21,13 +19,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var weatherStackView: UIStackView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         weatherStackView.alpha = 0
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 
-    
     @IBAction func btnFetchWeather(_ sender: UIButton) {
         if let cityName = self.tfCityName.text {
             self.getCurrentWeather(cityName: cityName)
@@ -60,7 +59,6 @@ class ViewController: UIViewController {
                     })
                     self?.configureView(weatherInformation: weatherInformation)
                 }
-
             } else {
                 guard let errorMessage = try? decoder.decode(ErrorMessage.self, from: data) else { return }
                 // ui 매소드는 메인 쓰레들에서 처리
@@ -74,7 +72,6 @@ class ViewController: UIViewController {
     func configureView(weatherInformation: WeatherInformation) {
         self.lblCityName.text = weatherInformation.name
         if let weather = weatherInformation.weather.first {  //
-            print(weather)
             self.lblWeatherDescription.text = weather.description
         }
         self.lblCurrentTemp.text = "\(Int(weatherInformation.temp.temp - 273.15))℃"
@@ -88,14 +85,6 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-    
-    
-    
 }
 
 
